@@ -23,7 +23,7 @@ Projekt oferuje trzy tryby pracy (ON/OFF/AUTO) oraz graficzny interfejs z użyci
 
 Układ jest zaprojektowany pod działanie z **Vin typowym dla akumulatorów Li-Ion** (od 2.7 do 4 V), dzięki wykorzystaniu przetwornic buck-boost oraz boost.
 
-Całość zaprojektowano w programie **Altium Designer** z myślą o komforcie użytkownika podczas korzystania.
+Czterowarstwową płytkę zaprojektowano w programie **Altium Designer** z myślą o komforcie użytkownika podczas korzystania.
 
 ---
 
