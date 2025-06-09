@@ -1,0 +1,106 @@
+MIKROKONTROLER
+- potrzebujemy ADC bo fotorezystor
+- Timery z PWM-em, 3 kanały
+- TSC do slidera pojemnościowego i przycisków
+- SPI do sterowania wyświetla czem e-papier
+
+wybrany: STM32F051K6T6
+TME: https://www.tme.eu/pl/details/stm32f051k6t6/mikrokontrolery-st/stmicroelectronics/
+
+Dokumentacja: https://www.tme.eu/Document/44929c35040a10b3c0441ffd961a9f00/STM32F051C4T6.pdf
+- posiada 12-bitowy ADC z 16 kanałami
+- 2 timery do 4 kanałów z wyjściem PWM
+- obsługuje TSC (Touch Sensing Controller)
+- obsługuje protokły I2C/SPI
+- kosztuje mniej niż 15 zł
+
+---------------------------------------------------------
+
+WYŚWIETLACZ E-PAPIER
+- większość operuje na protokole SPI (3, 4 piny potrzebne + 2 dodatkowe na wyświetlacz)
+
+wybrany: 18401 WAVESHARE
+Rozdzielczość wyświetlacza: 296x152
+Wymiary okna (wys. x szer.): 30,704x60,088mm
+Wymiary: 37x83,5x1mm
+TME: https://www.tme.eu/pl/details/wsh-18401/e-papier/waveshare/18401/
+
+Dokumentacja: https://www.tme.eu/Document/e202719f7ea7de7a184ea88bdc3f3b85/WSH-18321.pdf
+str producenta: https://www.waveshare.com/2.66inch-e-Paper.htm
+
+WIKI: https://www.waveshare.com/wiki/2.66inch_e-Paper_Module
+
+---------------------------------------------------------
+
+POJEMNOŚCIOWY SLIDER DOTYKOWY
+- własnoręczna realizacja poprzez prowadzenie ścieżek na płytce PCB
+- realizowany będzie przez wbudowany hardware TSC (Touch Sensing Controller w mikroprocku)
+- potrzebne będą więc 4 piny GPIO na slider (3 jako elektrody i jedna jako sampling)
+
+-------------------------------------------------------
+
+POJEMNOŚCIOWY PRZYCISK DOTYKOWY
+- użyłbym TSC do realizacji funkcji przycisku, wystarczyłby jeden, bo:
+	- przejście do kolejnego parametru za pomocą pojedynczego kliknięcia
+	- zmiana trybu pracy z ALWAYS ON/OFF/Auto za pomocą dwukliku
+	- ewentualnie można zmienić, by OFF było dopiero po pięciokliku
+
+-------------------------------------------------------
+
+Fotorezystor:
+
+PGM5659D
+TME: https://www.tme.eu/pl/details/pgm5659d/fotorezystory/token/
+
+Dokumentacja: https://www.tme.eu/Document/c93f2131e72ed20d433c8f1c5d3004c0/PGM%20series.pdf
+
+-------------------------------------------------------
+
+Przetwornica na 3,3 V typu buck-boost
+
+TPS63001DRCT
+TME: https://www.tme.eu/pl/details/tps63001drct/regulatory-napiecia-uklady-dc-dc/texas-instruments/
+
+Dokumentacja: https://www.ti.com/lit/ds/symlink/tps63001.pdf?ts=1728492256700
+
+
+Dławik do przetwornicy - polecany z dokumentacji: LQH3NPN2R2MMEL
+TME: https://www.tme.eu/pl/details/lqh3npn2r2mmel/dlawiki/murata/
+
+
+-----------------------------------------------------
+
+Przetwornica na 5 V typu boost
+
+TLV61070ADBVR
+TME: https://www.tme.eu/pl/details/tlv61070adbvr/regulatory-napiecia-uklady-dc-dc/texas-instruments/
+
+Dokumentacja: https://www.ti.com/lit/ds/symlink/tlv61070a.pdf?ts=1728487589490&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTLV61070A
+
+wybrana cewka: 74438357022
+Mouser: https://www.mouser.pl/ProductDetail/Wurth-Elektronik/74438357022?qs=AQlKX63v8RubbRasA1I44A%3D%3D&srsltid=AfmBOorbJ4XNS6euIHUQ9vtuMRDNBIFHEV1KkmJXdfx2GZ65huUaaK3z
+
+kondensator wyjściowy: CL21A106KAYNNNE
+TME: https://www.tme.eu/pl/details/cl21a106kaynnne/kondensatory-mlcc-smd/samsung/
+
+
+-----------------------------------------------------
+
+Drivery LED
+
+TPS92201ADRVR
+Mouser: https://www.mouser.pl/ProductDetail/Texas-Instruments/TPS92201ADRVR?qs=Z%252BL2brAPG1KZs1rryKr0Dw%3D%3D&utm_id=20109199562&utm_source=google&utm_medium=cpc&utm_marketing_tactic=emeacorp&gad_source=1&gbraid=0AAAAADn_wf0KXqKEdMWmAICs1p___sf9H&gclid=Cj0KCQjwzrzABhD8ARIsANlSWNOOKy0yyWnLXmS5SMlDBx4yWZxqzAhDR-7RiFye_ORCyRJrKGI-jWwaAglqEALw_wcB
+
+Dokumentacja: https://www.ti.com/lit/ds/symlink/tps92201.pdf?ts=1745613611546&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FTPS92201
+
+-----------------------------------------------------
+
+4-pin male header
+Amphenol Communications Solutions 77311-118-04LF
+Octopart: https://octopart.com/es/77311-118-04lf-amphenol+communications+solutions-126519074
+
+-----------------------------------------------------
+
+2-pin screw terminal block
+Phoenix Contact 1725656
+Octopart: https://octopart.com/es/1725656-phoenix+contact-7573?gad_source=1&gad_campaignid=20634325197&gbraid=0AAAAAqOd6xf_YCoz8Jjhd38IpcIcxPgLc&gclid=Cj0KCQjwuvrBBhDcARIsAKRrkjelHlok0lZbvdsGngIrel_p1dy5y95VWOzDRCRibHb6tKeCngQc0vMaAoA6EALw_wcB

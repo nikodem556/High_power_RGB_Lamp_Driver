@@ -1,0 +1,45 @@
+NIKODEM SZAFRAN, 11:30, LABORATORIUM PROJEKTOWE
+
+zajęcia 1., 03.03.2025
+- pliki zapisujemy w info.txt
+- nie spóźniać się
+- pliki jako docx i PDF
+- dodajemy po każdych zajęciach
+- własne rysunki, symulacje itd. też mają być zamieszczane
+- PCB-ki w PDF-ie
+- obrazki do 1MB
+- projekt ma wymagania, które trzeba spełnić by dostać STAMP-a
+- generatory ceramiczne są dużo tańsze niż RC i kwarc
+- egzamin (wykład + laboratorium), część ustna i pisemna
+- lektura obowiązkowa: "Sztuka elektroniki" P.Horowitz
+- projekt realizowany wyłącznie w formie teoretycznej
+TEMAT WSTĘPNY: fotorezystor - czujnik => mocne podświetlenie do 20W, sterowanie za pomocą PWM, kolorem, modelowanie systemu zasilania i fotorezystora, USB-C 10W wejście
+
+zajęcia 2., 24.03.2025
+TEMAT PROJEKTU: Sterowanie lampą (taśma diod) RGB do 20 W z modulacją koloru, jasności i fotorezystora.
+- diody zasilane z PWM (najlepiej sygnał na B tranzystora i przez tranzystory)
+- trzy tryby: OFF, ON, Auto (wykrywanie przez fotorezystor)
+- robimy dwie przetwornicę: 3.3 V dla mikrokontrolera i 5 V dla zasilania diod i innych potrzebnych peryferiów
+- realizacja przełącznika OFF/ON/Auto - OFF ma "usypiać" mikrokontroler, ponieważ będzie to bardziej wydajne energetycznie - akumulator który nie jest obciążony rozładowuje się szybciej sam, niż jak będzie do niego podłączony uśpiony UC
+- modulacja koloru, jasności i fotorezystora będzie się odbywała poprzez dotykowy czujnik pojemnościowy
+- wyświetlanie aktualnych ustawień wymienionych powyżej parametrów realizowane przez e-papier
+- !!! Ograniczenie realizacji układu tylko do mikrokontrolera i sterowania (nie realizujemy układu zasilania szczegółowo) !!!
+- akumulator potrzebuje mieć Q-meter (wyświetlanie jak naładowana jest bateria)
+
+zajęcia 3., 14.04.2025
+- realizacja sterowania diodami w sch_ideowy v2 była zła. Zainteresuj się driverami dla diod RGB i zrób to w taki sposób
+- 3 przetwornice i 3 drivery - inaczej nie ma sensu
+- wyjście na diody RGB zrealizowane jako goldpiny
+- diody lepiej sterować prądowo niż napięciowo - stąd drivery
+
+zajęcia 4., 05.05.2025
+- czas na prezentację: 10 minut z zegarkiem w ręku
+- kolejne zajęcia już są prezentacyjne, trza mieć wszystko gotowe
+- nie realizuj układów zabezpieczających coś w procesorze jako diody Zenera B))
+- pytania:
+	Jak zrobić panel dotykowy na płytce? Zrobić to jako ścieżkę, o jakiejś konkretnej szerokości? Jakiej? Jak długa powinna być?
+
+	Czy zrealizować na płytce Vin jako goldpiny, gdzie możemy po prostu podpiąć zasilanie?
+
+	Czy końcowo zastosowane drivery mają sens? Z tego co zrozumialem driver dopasowuje napięcie przewodzenia do diody, max jesteśmy w stanie uciągnąć 5V, a sterujemy prądowo do 1.3A.
+

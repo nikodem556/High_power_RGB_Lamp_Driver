@@ -1,0 +1,12 @@
+TSC:
+https://www.st.com/resource/en/product_training/STM32L4_Peripheral_Touchsense.pdf
+Dokument ten opisuje działanie TRSC, na stronie 7 i 8 opisane działanie modułu.
+Natomiast na stronie 17 znajdziemy przykładową aplikacje.
+Strona 18 zawiera porady na temat realizacji w PCB-ku. 
+
+Załączanie gotowych bibliotek (nie musimy sami rysować footprintów)
+https://www.altium.com/documentation/altium-designer/designing-with-touch-controls?srsltid=AfmBOorkh53dH4zVsbhSyCZVh9boomqhBQNSVbj5R8PQX9KuK3I6n8G0#sensor-implementation
+
+ADC:
+https://www.st.com/resource/en/datasheet/dm00039193.pdf
+Korzystając z przykładowej aplikacji dla ADC ze strony 79, rysunku 26,

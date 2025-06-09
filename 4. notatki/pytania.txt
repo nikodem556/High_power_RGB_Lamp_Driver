@@ -1,0 +1,12 @@
+1. Czy może zamiast stosowania jednej przetwornicy do wszystkich 3 kolorów, łatwiej zrobić 3 przetwornice na 5V.
+Rozwinięcie: będziemy mieć na jednej przetwornicy obciążenie do 4A max., ale wychodzi średnio 1.3 A na kanał - będzie dużo większy wybór, cenowo pewnie raczej podobnie
+Odpowiedź:
+
+2. Wybrany przeze mnie wyświetlacz e-papier występuje w formie z shieldem i bez shielda.  Czy mogę wybrać ten z shieldem i po prostu wyprowadzić nasze ścieżki na zewnątrz byśmy mogli podłączyć? Czy powinienem zrobić własnego shielda? Jeśli mam robić go na płytce - to w jaki sposób ma odbyć się jego przymocowanie, gdyż nie posiada niczego co pozwalałoby na jakiego łatwe przymocowanie
+
+
+3. W jaki sposób wyprowadzić sterowanie dla tych naszych diod RGB - czy to powinny być jakieś wystające goldpiny cyz coś?
+
+
+4. TSC
+

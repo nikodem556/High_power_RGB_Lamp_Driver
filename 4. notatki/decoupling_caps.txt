@@ -1,0 +1,2 @@
+100nf kondensatory ceramiczen do zasilania STM, np. X74 zalecane, 10V
+a także jeden duzy 4,7 uF czy 10uF ceramiczny lub tantalowy dla całego układu wpięty pomiędzy Vdd i Vss
